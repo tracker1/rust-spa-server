@@ -1,21 +1,8 @@
 // use std::{env, io};
 
 use actix_files as fs;
-// use actix_session::{CookieSession, Session};
-// use actix_utils::mpsc;
-use actix_web::http::{
-    //header, Method, 
-    StatusCode
-};
-use actix_web::{
-    //error, 
-    guard, middleware, web, App, 
-    //Error, HttpRequest, 
-    HttpResponse, HttpServer,
-    // Guard,
-    Result,
-};
-// use bytes::Bytes;
+use actix_web::http::{StatusCode};
+use actix_web::{guard, middleware, web, App, HttpResponse, HttpServer,Result};
 
 /// 404 handler
 async fn p404() -> Result<fs::NamedFile> {
